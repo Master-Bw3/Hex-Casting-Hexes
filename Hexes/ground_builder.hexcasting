@@ -1,0 +1,338 @@
+#define Debug (NE dead)
+{
+    Flock's Reflection
+    Flock's Gambit
+    Reveal
+    Flock's Disintegration
+}
+
+
+#define Set Y Zero (NE dead) = vec -> vec
+{
+    Vector Disintegration
+    Bookkeeper's Gambit: v-
+    Numerical Reflection: 0
+    Jester's Gambit
+    Vector Exaltation
+}
+
+//pos, start, end  -> point
+#define Arc (NE dead) = num, vec, vec -> vec 
+{
+    Store($end)
+    Store($start)
+    Store($pos)
+
+    //get xDist
+    $end
+    Set Y Zero
+    $start
+    Set Y Zero
+    Subtractive Distillation
+    Length Purification
+    Store($xDist)
+
+    //get height
+    $end
+    $start
+    Subtractive Distillation
+    Vector Disintegration
+    Bookkeeper's Gambit: v-v
+    Store($height)
+
+    //get t
+    $xDist
+    $pos
+    Multiplicative Distillation
+    Store($t)
+
+    
+    //y = sin((pi/xDist)*t)*0.5*xDist
+
+    //sin((pi/xDist)*t)
+    Arc's Reflection
+    $xDist
+    Division Distillation
+    $t
+    Multiplicative Distillation
+    Sine Purification
+
+    //*0.5*xDist
+    <{0.5}>
+    $xDist
+    Multiplicative Distillation
+    Multiplicative Distillation
+
+    //get between pos
+    $end
+    $start
+    Subtractive Distillation
+    $pos
+    Multiplicative Distillation
+    $start
+    Additive Distillation
+
+    //add arc Y
+    Numerical Reflection: 0
+    Rotation Gambit
+    Numerical Reflection: 0
+    Vector Exaltation
+    Additive Distillation  
+    
+}
+
+//block pos, arc end pos
+#define Move Block Along Path (NE dead) = num, num
+{
+    Jester's Gambit
+    //[end pos, start pos]
+    Gemini Decomposition
+    Vector Reflection -Y
+    Additive Distillation
+    Store($wispStart)
+    Gemini Decomposition
+    //[end pos, start pos, start pos]
+
+    //summon a wisp
+    //for i in range 0..=1 where i increases by 0.1:
+        //generate arc point
+        //move block to point
+    
+    {
+        {
+            Bookkeeper's Gambit: -
+            Bookkeeper's Gambit: -
+        }
+        Flock's Disintegration
+        Path Cyclic Code Init
+    }
+
+    //embed start_pos
+    Numerical Reflection: 1
+    Rotation Gambit
+    Surgeon's Exaltation
+
+    //embed wait
+    Numerical Reflection: 2
+    $Wait
+    Surgeon's Exaltation
+
+
+
+    {
+        {
+            Bookkeeper's Gambit: -
+            Bookkeeper's Gambit: -
+        }
+        Flock's Disintegration
+        Path Cyclic Code
+    }
+    
+    //embed start & end pos
+    Numerical Reflection: 2
+    Numerical Reflection: 4
+    Fisherman's Gambit
+    Surgeon's Exaltation
+    
+    Numerical Reflection: 1
+    Numerical Reflection: 4
+    Fisherman's Gambit
+    Surgeon's Exaltation
+    //combine into 1 list
+    Combination Distillation  
+
+    //init heap
+    Extern {}
+    Jester's Gambit
+    Combination Distillation      
+
+    $wispStart
+    <{5000000}>
+    Summon Cyclic Wisp
+    
+
+    
+}
+
+//[self, start_pos. wait]   
+#define Path Cyclic Code Init (NE dead)
+{   
+    if {
+        Flock's Reflection
+        Numerical Reflection: 3
+        Equality Distillation
+    } then {
+        Delay Wisp
+        Numerical Reflection: 0
+        Store($pos)
+
+        Numerical Reflection: 20
+        Haste  
+        //[self, start_pos]
+        Bookkeeper's Gambit: vv
+    } 
+    Hermes' Gambit
+
+    Flock's Reflection
+    Numerical Reflection: 0
+    Equality Distillation
+    {
+        Charon's Gambit        
+        Bookkeeper's Gambit: -
+    }
+    Flock's Disintegration
+    Augur's Exaltation
+    Hermes' Gambit
+
+    if {
+        Flock's Reflection
+        Numerical Reflection: 2
+        Equality Distillation
+    } then {
+        Bookkeeper's Gambit: v
+        //summon falling block
+        Gemini Decomposition
+        Vector Reflection -Y
+        Additive Distillation
+        Vector Reflection +Y
+        Greater Translocation
+        Falling Block
+        //get falling block
+        Identity Reflection: @Wisp
+        Compass' Purification: (0, 0, 0)
+        Vector Reflection +Y
+        Additive Distillation
+        Entity Purification: @Block
+        Store($block)
+
+    } else {
+        Bookkeeper's Gambit: vvvv
+    }
+    Hermes' Gambit
+    //stack empty
+
+}
+
+//starting stack: [start pos, end pos]
+#define Path Cyclic Code (NE dead)
+{   
+    //get arc point
+    $pos
+    //end if pos > 1
+    if {
+        Gemini Decomposition
+        Numerical Reflection: 1
+        Maximus Distillation
+    } then {
+        //set falling block velocity to 0
+        $block
+        Gemini Decomposition
+        Pace Purification: (0, 0, 0)
+        Numerical Reflection: -1
+        Multiplicative Distillation
+        Impulse
+        
+
+        Bookkeeper's Gambit: ----
+        
+    }
+    Hermes' Gambit
+    
+
+
+    Rotation Gambit II
+    Jester's Gambit
+    Arc
+
+    //move wisp to new location
+    Gemini Decomposition
+    Pathfinder's Gambit
+    
+
+    //get vec between arc point and current position
+    $block  
+    Compass' Purification II: (0, 0, 0)
+    Subtractive Distillation
+
+    //subtract current velocity
+    $block
+    Pace Purification: (0, 0, 0)
+    Subtractive Distillation
+
+    $block
+    Jester's Gambit
+    Impulse
+    
+  
+    $pos   
+    <{0.05}>
+    Additive Distillation
+    Store($pos)
+    
+    //make next iteration stack size 4 to skip init conditions
+    Nullary Reflection    
+    Nullary Reflection    
+}
+
+//origin -> block
+#define Get Random Surface Block (NE dead) = vec -> vec
+{
+    //rand x
+    Entropy Reflection
+    Numerical Reflection: 30
+    Multiplicative Distillation
+    Numerical Reflection: 15
+    Subtractive Distillation
+    Ceiling Purification
+    
+    //y
+    Numerical Reflection: 15
+    
+    //rand z
+    Entropy Reflection
+    Numerical Reflection: 30
+    Multiplicative Distillation
+    Numerical Reflection: 15
+    Subtractive Distillation
+    Ceiling Purification
+
+    Vector Exaltation
+    Additive Distillation
+    
+    //raycast down
+    Vector Reflection -Y
+    Archer's Distillation: (0, 0, 0) 
+}
+
+/////////////
+
+
+
+Numerical Reflection: 0
+Store($Wait)
+
+
+{
+    Locate Sentinel
+    Additive Distillation
+    Vector Reflection +Y
+    Additive Distillation
+    
+        
+
+    Mind's Reflection
+    Compass' Purification: (0, 0, 0)
+    Get Random Surface Block
+    Vector Reflection +Y
+    Additive Distillation
+    Jester's Gambit
+    Move Block Along Path
+    
+    $Wait
+    Numerical Reflection: 4
+    Additive Distillation
+    Store($Wait)
+}
+
+<{[(0.00, 0.00, 2.00), (0.00, 0.00, 1.00), (0.00, 0.00, 0.00), (0.00, 0.00, -1.00), (0.00, 0.00, -2.00), (0.00, 1.00, 2.00), (0.00, 1.00, 1.00), (0.00, 1.00, 0.00), (0.00, 1.00, -1.00), (0.00, 1.00, -2.00), (0.00, 2.00, 2.00), (0.00, 2.00, 1.00), (0.00, 2.00, 0.00), (0.00, 2.00, -1.00), (0.00, 2.00, -2.00)]}>
+Thoth's Gambit
