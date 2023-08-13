@@ -1,0 +1,12 @@
+[objective]
+move snake head onto shulker to score points
+
+[rules]
+snake cannot run into itself or the walls
+
+
+[requirements]
+way to keep track of points
+way to keep track of snake sagment positions
+way for user to change which direction the snake is moving
+collision detection

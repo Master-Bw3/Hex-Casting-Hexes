@@ -1,0 +1,12 @@
+/* 
+List, Pattern List -> List
+Thoth's Gambit, but the inputs are reversed and the rest of the stack is ignored.
+ */
+
+{
+    Numerical Reflection: 2
+    Sandbox
+    Jester's Gambit //remove if you don't want the inputs to be reversed
+    Thoth's Gambit
+    UnSandbox
+}

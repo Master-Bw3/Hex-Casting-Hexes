@@ -1,0 +1,192 @@
+{
+    Mind's Reflection
+    Compass' Purification
+    Mind's Reflection
+    Alidade's Purification
+    Architect's Distillation
+    Numerical Reflection: -1
+    Multiplicative Distillation
+    
+
+    Mind's Reflection
+    Compass' Purification
+    Mind's Reflection
+    Alidade's Purification
+    Archer's Distillation
+    {
+        Bookkeeper's Gambit: - // offsets
+    }
+    Flock's Disintegration
+    {
+        Additive Distillation
+        Additive Distillation
+        Break Block
+    }
+    Apply II
+}
+
+
+/*
+how to compile:
+1. run "box" (https://forum.petra-k.at/viewtopic.php?t=26) with an input of [2, 2, 2]
+1.5 offset box by [-1, -1, -1]
+2. save to focus or something
+3. draw the 3x3x3 Miner hex
+4. draw Numerical Reflection: 6
+5. import the offset list
+6. draw Surgeon's Exaltation
+*/
+
+Numerical Reflection: 2
+Numerical Reflection: 2
+Numerical Reflection: 2
+Vector Exaltation
+
+//box
+{
+    Bookkeeper's Gambit: v
+    Muninn's Reflection
+    Numerical Reflection: 4
+    Gemini Gambit
+    Flock's Disintegration      //lists, [z, y, x, num], z, y, x, num
+    Bookkeeper's Gambit: vv--   //lists, x, index
+    Jester's Gambit
+    Modulus Distillation        //lists, x'
+    Jester's Gambit
+    Flock's Disintegration
+    Bookkeeper's Gambit: v---   //lists, x', y, x, num
+    Jester's Gambit
+    Division Distillation
+    Floor Purification          //lists, x' y, num/x
+    Jester's Gambit
+    Modulus Distillation        //lists, x' y'
+    Rotation Gambit
+    Flock's Disintegration      //list, x', y', z, y, x, num
+    Rotation Gambit II
+    Multiplicative Distillation //list, x', y', z, num, y*x
+    Division Distillation
+    Floor Purification
+    Jester's Gambit
+    Modulus Distillation
+    Vector Exaltation
+    Jester's Gambit
+    Gemini Decomposition
+    Numerical Reflection: 3
+    Selection Distillation
+    Numerical Reflection: 1
+    Additive Distillation
+    Numerical Reflection: 3
+    Jester's Gambit
+    Surgeon's Exaltation
+    Huginn's Gambit
+}
+Jester's Gambit
+Numerical Reflection: 1
+Additive Distillation
+Gemini Decomposition
+Vector Disintegration
+Numerical Reflection: 3
+Flock's Gambit                  //[x, y, z]
+Retrograde Purification         //[z, y, x]
+Numerical Reflection: 0         
+Integration Distillation        //list, vec, [z, y, x, 0]
+Huginn's Gambit
+Vector Disintegration
+Multiplicative Distillation
+Multiplicative Distillation
+Gemini Decomposition
+Gemini Gambit
+Gemini Decomposition
+Flock's Gambit
+Thoth's Gambit
+
+//offset by [-1, -1, -1]
+Numerical Reflection: -1
+Numerical Reflection: -1
+Numerical Reflection: -1
+Vector Exaltation
+Jester's Gambit
+{
+    Additive Distillation
+    
+}
+
+//Apply II
+{
+    Flock's Disintegration
+    Jester's Gambit
+}
+Jester's Gambit
+Combination Distillation
+Rotation Gambit
+{
+    {
+        Bookkeeper's Gambit: -
+    }
+}
+Jester's Gambit
+Numerical Reflection: 1
+Jester's Gambit
+Surgeon's Exaltation
+Jester's Gambit
+Combination Distillation
+Jester's Gambit
+Thoth's Gambit
+
+Huginn's Gambit
+
+//3x3x3 Miner
+{
+    Mind's Reflection
+    Compass' Purification
+    Mind's Reflection
+    Alidade's Purification
+    Architect's Distillation
+    Numerical Reflection: -1
+    Multiplicative Distillation
+
+    Mind's Reflection
+    Compass' Purification
+    Mind's Reflection
+    Alidade's Purification
+    Archer's Distillation
+    {
+        Bookkeeper's Gambit: - // offsets
+    }
+    Flock's Disintegration
+    {
+        Additive Distillation
+        Additive Distillation
+        Break Block
+    }
+    
+    //apply 2
+    {
+        Flock's Disintegration
+        Jester's Gambit
+    }
+    Jester's Gambit
+    Combination Distillation
+    Rotation Gambit
+    {
+        {
+            Bookkeeper's Gambit: -
+        }
+    }
+    Jester's Gambit
+    Numerical Reflection: 1
+    Jester's Gambit
+    Surgeon's Exaltation
+    Jester's Gambit
+    Combination Distillation
+    Jester's Gambit
+    Thoth's Gambit
+}
+
+//insert offsets
+Numerical Reflection: 13
+Muninn's Reflection
+Surgeon's Exaltation
+
+
+

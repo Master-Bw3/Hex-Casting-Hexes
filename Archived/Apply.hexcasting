@@ -1,0 +1,55 @@
+/*
+Simplified Apply (any, pattern list, integer -> list)
+For n times, put the first input on the top of the stack, then execute the pattern list on it. Creates a list of results
+note: this version is designed for when there are no other iotas on the stack other than the 3 inputs
+*/
+{
+    Numerical Reflection: 3
+    Fisherman's Gambit
+    Jester's Gambit
+    Gemini Gambit
+    Flock's Reflection
+    Numerical Reflection: -1
+    Additive Distillation
+    Flock's Gambit
+    Thoth's Gambit
+}
+
+
+// Apply
+//note: this version works with additional iotas on the stack, but it will overwrite the ravenmind
+{
+    Flock's Reflection
+    Flock's Gambit
+    Gemini Decomposition
+    Gemini Decomposition
+    Abacus Purification
+    Gemini Decomposition
+    Numerical Reflection: 3
+    Subtractive Distillation
+    Jester's Gambit
+    Selection Exaltation
+    Jester's Gambit
+    Gemini Decomposition
+    Abacus Purification
+    Numerical Reflection: 3
+    Subtractive Distillation
+    Numerical Reflection: 0
+    Jester's Gambit
+    Selection Exaltation
+    Huginn's Gambit
+    Flock's Disintegration
+    Numerical Reflection: 3
+    Fisherman's Gambit
+    Jester's Gambit
+    Gemini Gambit
+    Flock's Reflection
+    Numerical Reflection: -1
+    Additive Distillation
+    Flock's Gambit
+    Thoth's Gambit
+    Muninn's Reflection
+    Flock's Disintegration
+    Flock's Reflection
+    Fisherman's Gambit
+}

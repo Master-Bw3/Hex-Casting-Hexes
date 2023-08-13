@@ -1,0 +1,31 @@
+/* 
+List, List, Pattern List -> List
+For each element in the first list, put the element of that index from both lists onto the stack, then evaluate the pattern list.
+note: the first list must be <= to the length of the second list.
+
+*/
+
+{
+    Numerical Reflection: 3
+    Sandbox
+    Rotation Gambit II
+    Jester's Gambit
+    Gemini Decomposition
+    Abacus Purification
+    Counter's Queue
+    Numerical Reflection: 4
+    Fisherman's Gambit
+    {
+        Gemini Decomposition
+        Rotation Gambit II
+        Selection Distillation
+        Rotation Gambit II
+        Selection Distillation
+    }
+    Jester's Gambit
+    Combination Distillation
+    Jester's Gambit
+    Thoth's Gambit
+    Bookkeeper's Gambit: vv-
+    UnSandbox
+}

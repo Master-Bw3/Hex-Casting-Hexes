@@ -1,0 +1,9 @@
+/* 
+
+snake segment positions stored in focus in item frame
+
+snake start point: [10, 1, 10]
+snake initial length: 2
+ */
+
+ 

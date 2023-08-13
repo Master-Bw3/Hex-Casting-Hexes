@@ -1,0 +1,32 @@
+/*
+Apply (any, list, pattern list)
+for each element in the first list, put the first input on the stack, then the element on the stack, then execute pattern list on it.
+Creates a list of results
+*/
+
+
+{
+    Numerical Reflection: 3
+    Bookkeeper's Gambit: -- //Sandbox
+    {
+        Flock's Disintegration
+        Jester's Gambit
+    }
+    Jester's Gambit
+    Combination Distillation
+    Rotation Gambit
+    {
+        {
+            Bookkeeper's Gambit: -
+        }
+    }
+    Jester's Gambit
+    Numerical Reflection: 1
+    Jester's Gambit
+    Surgeon's Exaltation
+    Jester's Gambit
+    Combination Distillation
+    Jester's Gambit
+    Thoth's Gambit
+    Bookkeeper's Gambit: -- //UnSandbox
+}
