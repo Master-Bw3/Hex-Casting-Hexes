@@ -1,0 +1,32 @@
+[[libraries]]
+location = [0,0,0]
+
+[[libraries]]
+location = [0,1,0]
+"qaq" = "True"
+"ead" = "False"
+
+
+[[libraries]]
+location = [0,0,1]
+"qaq" = "True"
+
+[[entities]]
+name = "Caster"
+uuid = "[I;2016041815,-347258549,-1733205453,430415802]"
+type = "Player"
+item = "Focus"
+iota = "[]"
+
+
+[[entities]]
+name = "Wisp"
+type = "Misc"
+
+[[entities]]
+name = "Block"
+type = "Misc"
+
+[Great_Spells]
+"move_block/spell" = "qqeeqeqqwqqqeeqdeeqeeeqeeqeeeaqqw"
+"teleport" = "eeqwaqqqqqdeewwweeewdeeweewwwee"

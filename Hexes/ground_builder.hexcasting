@@ -16,12 +16,9 @@
     Vector Exaltation
 }
 
-//pos, start, end  -> point
-#define Arc (NE dead) = num, vec, vec -> vec 
+
+#define Arc (NE dead) = -> vec 
 {
-    Store($end)
-    Store($start)
-    Store($pos)
 
     //get xDist
     $end
@@ -84,67 +81,32 @@
 //block pos, arc end pos
 #define Move Block Along Path (NE dead) = num, num
 {
+
+
     Jester's Gambit
     //[end pos, start pos]
-    Gemini Decomposition
     Vector Reflection -Y
     Additive Distillation
     Store($wispStart)
     Gemini Decomposition
-    //[end pos, start pos, start pos]
+    //[end pos, start pos]
+    Store($start)
+    Store($end)
 
     //summon a wisp
     //for i in range 0..=1 where i increases by 0.1:
         //generate arc point
         //move block to point
-    
-    {
-        {
-            Bookkeeper's Gambit: -
-            Bookkeeper's Gambit: -
-        }
-        Flock's Disintegration
-        Path Cyclic Code Init
-    }
+    Nullary Reflection
+    Store($block)
 
-    //embed start_pos
-    Numerical Reflection: 1
-    Rotation Gambit
-    Surgeon's Exaltation
+    Numerical Reflection: 0
+    Store($pos)
 
-    //embed wait
-    Numerical Reflection: 2
-    $Wait
-    Surgeon's Exaltation
-
-
-
-    {
-        {
-            Bookkeeper's Gambit: -
-            Bookkeeper's Gambit: -
-        }
-        Flock's Disintegration
+    Extern {
         Path Cyclic Code
     }
-    
-    //embed start & end pos
-    Numerical Reflection: 2
-    Numerical Reflection: 4
-    Fisherman's Gambit
-    Surgeon's Exaltation
-    
-    Numerical Reflection: 1
-    Numerical Reflection: 4
-    Fisherman's Gambit
-    Surgeon's Exaltation
-    //combine into 1 list
-    Combination Distillation  
 
-    //init heap
-    Extern {}
-    Jester's Gambit
-    Combination Distillation      
 
     $wispStart
     <{5000000}>
@@ -154,124 +116,82 @@
     
 }
 
-//[self, start_pos. wait]   
-#define Path Cyclic Code Init (NE dead)
-{   
+
+//starting stack: [start pos, end pos]
+#define Path Cyclic Code (NE dead)
+{           
+    //if first iteration
     if {
-        Flock's Reflection
-        Numerical Reflection: 3
+        Identity Reflection
         Equality Distillation
     } then {
+        $wait
         Delay Wisp
-        Numerical Reflection: 0
-        Store($pos)
-
-        Numerical Reflection: 20
-        Haste  
-        //[self, start_pos]
-        Bookkeeper's Gambit: vv
-    } 
-    Hermes' Gambit
-
-    Flock's Reflection
-    Numerical Reflection: 0
-    Equality Distillation
-    {
-        Charon's Gambit        
-        Bookkeeper's Gambit: -
     }
-    Flock's Disintegration
-    Augur's Exaltation
-    Hermes' Gambit
-
-    if {
-        Flock's Reflection
-        Numerical Reflection: 2
-        Equality Distillation
+    //if no block (first iteration after wait)
+    else if {
+        $block
+        Nullary Reflection
+        Equality Distillation       
     } then {
-        Bookkeeper's Gambit: v
         //summon falling block
-        Gemini Decomposition
-        Vector Reflection -Y
-        Additive Distillation
+        $wispStart
         Vector Reflection +Y
         Greater Translocation
         Falling Block
         //get falling block
-        Identity Reflection: @Wisp
-        Compass' Purification: (0, 0, 0)
+        $wispStart
         Vector Reflection +Y
         Additive Distillation
         Entity Purification: @Block
         Store($block)
-
-    } else {
-        Bookkeeper's Gambit: vvvv
     }
-    Hermes' Gambit
-    //stack empty
-
-}
-
-//starting stack: [start pos, end pos]
-#define Path Cyclic Code (NE dead)
-{   
-    //get arc point
-    $pos
-    //end if pos > 1
-    if {
-        Gemini Decomposition
+    //if pos is > 1
+    else if {
+        $pos
         Numerical Reflection: 1
         Maximus Distillation
     } then {
-        //set falling block velocity to 0
+        //set velocity to 0
         $block
         Gemini Decomposition
-        Pace Purification: (0, 0, 0)
+        Pace Purification
         Numerical Reflection: -1
         Multiplicative Distillation
         Impulse
+        //destroy wisp
+        Bookkeeper's Gambit: ----------
+    //if pos is <= 1
+    } else {
+        //get location on arc
+        Arc
+
+        //move wisp to new location
+        Gemini Decomposition
+        Pathfinder's Gambit
         
 
-        Bookkeeper's Gambit: ----
+        //get vec between arc point and current position
+        $block  
+        Compass' Purification II: (0, 0, 0)
+        Subtractive Distillation
+
+        //subtract current velocity
+        $block
+        Gemini Decomposition
+        Pace Purification: (0, 0, 0)
+        Subtractive Distillation
+        Impulse
         
+        //increment pos
+        $pos   
+        <{0.05}>
+        Additive Distillation
+        Store($pos)
     }
     Hermes' Gambit
-    
 
-
-    Rotation Gambit II
-    Jester's Gambit
-    Arc
-
-    //move wisp to new location
-    Gemini Decomposition
-    Pathfinder's Gambit
-    
-
-    //get vec between arc point and current position
-    $block  
-    Compass' Purification II: (0, 0, 0)
-    Subtractive Distillation
-
-    //subtract current velocity
-    $block
-    Pace Purification: (0, 0, 0)
-    Subtractive Distillation
-
-    $block
-    Jester's Gambit
-    Impulse
-    
-  
-    $pos   
-    <{0.05}>
-    Additive Distillation
-    Store($pos)
-    
-    //make next iteration stack size 4 to skip init conditions
-    Nullary Reflection    
-    Nullary Reflection    
+    Nullary Reflection
 }
 
 //origin -> block
@@ -306,10 +226,12 @@
 
 /////////////
 
+// Vector Reflection Zero
+// Summon Sentinel
 
 
 Numerical Reflection: 0
-Store($Wait)
+Store($wait)
 
 
 {
@@ -328,10 +250,10 @@ Store($Wait)
     Jester's Gambit
     Move Block Along Path
     
-    $Wait
+    $wait
     Numerical Reflection: 4
     Additive Distillation
-    Store($Wait)
+    Store($wait)
 }
 
 <{[(0.00, 0.00, 2.00), (0.00, 0.00, 1.00), (0.00, 0.00, 0.00), (0.00, 0.00, -1.00), (0.00, 0.00, -2.00), (0.00, 1.00, 2.00), (0.00, 1.00, 1.00), (0.00, 1.00, 0.00), (0.00, 1.00, -1.00), (0.00, 1.00, -2.00), (0.00, 2.00, 2.00), (0.00, 2.00, 1.00), (0.00, 2.00, 0.00), (0.00, 2.00, -1.00), (0.00, 2.00, -2.00)]}>
