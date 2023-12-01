@@ -1,0 +1,58 @@
+Numerical Reflection: 0
+Huginn's Gambit
+{
+    //turn string into list of chars
+    Blank Reflection
+    Separation Distillation
+
+    {
+        //turn list of strings into list of numbers and null
+        Input Purification
+        Gemini Decomposition
+            
+        //filter out nulls
+        Nullary Reflection
+        Equality Distillation
+        {
+            Bookkeeper's Gambit: v
+            Bookkeeper's Gambit: -
+        }
+        Flock's Disintegration
+        Augur's Exaltation
+        Hermes' Gambit    
+    }
+    Jester's Gambit
+    Thoth's Gambit
+
+    //get first number in the list
+    Gemini Decomposition
+    Numerical Reflection: 0
+    Selection Distillation
+    //multiply by 10 so that it can be added to the second digit
+    Numerical Reflection: 10
+    Multiplicative Distillation
+
+    //get the second number in the list
+    Jester's Gambit
+    Retrograde Purification
+    Speaker's Decomposition
+
+    //remove list
+    Bookkeeper's Gambit: -v-
+
+    //add to get number
+    Additive Distillation
+
+    //add to sum
+    Muninn's Reflection
+    Additive Distillation
+    Huginn's Gambit
+}
+Jester's Gambit
+Thoth's Gambit
+Bookkeeper's Gambit: v
+
+Muninn's Reflection
+
+
+
