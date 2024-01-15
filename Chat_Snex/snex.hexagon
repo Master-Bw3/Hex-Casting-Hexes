@@ -1,0 +1,581 @@
+#define Debug (NE dead)
+{
+    Flock's Reflection
+    Flock's Gambit
+    Reveal
+    Flock's Disintegration
+    
+}
+
+#define Debug Ravenmind (NE dead)
+{
+    Muninn's Reflection
+    Reveal
+    Bookkeeper's Gambit: v
+
+}
+
+// y, x -> atan2(y, x)
+#define Inverse Tangent Distillation (WEST qdaqqqqqw) = num, num -> num
+{
+    Dioscuri Gambit
+    Numerical Reflection: 0
+    Minimus Distillation II
+    
+    Jester's Gambit
+    Augur's Purification
+    
+    Dioscuri Gambit
+    Negation Purification
+    Conjunction Distillation
+
+    Rotation Gambit II
+    Conjunction Distillation
+    
+    Numerical Reflection: 16
+    Swindler's Gambit
+
+    Length Purification
+    
+    Dioscuri Gambit
+    Numerical Reflection: 0
+    Vector Exaltation
+    Length Purification
+
+    Additive Distillation
+    
+    Rotation Gambit
+    {
+        Jester's Gambit
+        Bookkeeper's Gambit: -
+    }
+    Flock's Disintegration
+    Augur's Exaltation
+    Hermes' Gambit
+
+    Division Distillation
+    Inverse Tangent Purification
+    Numerical Reflection: 2
+    Multiplicative Distillation
+    
+    Arc's Reflection
+    Jester's Gambit
+    Augur's Exaltation
+}
+
+#define Iter (NE dead) = int -> List<int>
+{   
+    Numerical Reflection: -1
+    Additive Distillation
+    Copy($len)
+    Numerical Reflection: 1
+    Jester's Gambit
+    Gemini Gambit
+    $len
+    Flock's Gambit
+    Running Sum Purification
+    Numerical Reflection: 0
+    Speaker's Distillation
+}
+
+//Generate line to be displayed
+//line num, width, snake object
+#define Display Row (NE dead) = int, int, List<vec> -> String
+{
+    Store($snek2)
+    Store($width)
+
+    Store($lineNum)
+    Blank Reflection
+    Store($line)
+
+    Numerical Reflection: 0
+    Store($j)
+    while {
+        $j
+        $width
+        Minimus Distillation
+    } do {
+        
+        $j
+        $lineNum
+        Numerical Reflection: 0
+        Vector Exaltation
+        Store($pos)
+        if {
+            $snek2
+            $pos
+            Locator's Distillation
+            Numerical Reflection: -1
+            Inequality Distillation
+        } then {
+            <{"▉"}>
+        } else if {
+            $apple
+            $pos
+            Equality Distillation
+        } then {
+            <{"🍖"}>
+        } else {
+            <{"░"}>
+        }
+        Hermes' Gambit
+        $line
+        Jester's Gambit
+        Concatenation Distillation
+        Store($line)
+        
+
+        $j
+        Numerical Reflection: 1
+        Additive Distillation
+        Store($j)
+    }
+    $line
+        
+
+}
+
+//Display game state on macula
+//width, height snake object
+#define Display (NE dead) = int, int, List<vec> ->
+{
+    Store($apple)
+    Store($snek)
+    Store($height)
+    Store($width)
+
+
+    Breaking Reflection
+    Store($gridDisplay)
+
+    //x offset
+    Macula Gambit
+    Bookkeeper's Gambit: v
+    $width
+    //magic scaling constant
+    Numerical Reflection: 7
+    Multiplicative Distillation
+
+    Subtractive Distillation
+    Numerical Reflection: 2
+    Division Distillation
+    Store($xOffset)
+    //y offset
+    Macula Gambit
+    Bookkeeper's Gambit: v-
+    
+    $height
+        
+
+    //magic scaling constant
+    Numerical Reflection: 9
+
+    Multiplicative Distillation
+
+    Subtractive Distillation
+    Numerical Reflection: 2
+    Division Distillation
+    Store($yOffset)
+
+    Numerical Reflection: 0
+    Store($i)
+    while {
+        $i
+        $height
+        Minimus Distillation
+    } do {     
+
+        
+        $gridDisplay
+
+        //generate line
+        $i
+        $width
+        $snek
+        Hex {
+            Display Row
+        }
+        Hermes' Gambit
+        
+        
+        Breaking Reflection
+        Concatenation Distillation
+        Concatenation Distillation
+
+        //add to grid
+        Store($gridDisplay)
+        
+        
+
+        $i
+        Numerical Reflection: 1
+        Additive Distillation
+        Store($i)
+    }
+
+    // $xOffset
+    // $yOffset
+    // Numerical Reflection: 0
+    // Vector Exaltation
+    
+
+    $gridDisplay
+    Reveal
+    Bookkeeper's Gambit: v
+    // Calligrapher's Purification
+    
+
+    // Numerical Reflection: 1
+    // Numerical Reflection: 20
+    // Division Distillation
+    // Etch Visage
+    
+    
+}
+
+//get the snex movement direction from player movement or previous direction
+#define Update Direction (NE dead) = List<vec> vec -> vec
+{   
+    Store($prevDir)
+
+    Mind's Reflection
+    Pace Purification
+    Vector Disintegration
+    Bookkeeper's Gambit: v-
+
+    if {
+        //no movement
+        Numerical Reflection: 0
+        Equality Distillation
+        Jester's Gambit
+        Numerical Reflection: 0
+        Equality Distillation
+        Conjunction Distillation
+    } then {
+        $prevDir
+    } else {
+        Mind's Reflection
+        Pace Purification
+        Vector Disintegration
+        Bookkeeper's Gambit: v-
+        Inverse Tangent Distillation
+
+        Mind's Reflection
+        Alidade's Purification
+        Vector Disintegration
+        Bookkeeper's Gambit: v-
+
+        Inverse Tangent Distillation
+
+        Subtractive Distillation
+        
+        Circle's Reflection
+        Additive Distillation   
+        Circle's Reflection
+        Modulus Distillation
+        Store($rot)
+
+        if {
+            $rot
+            Numerical Reflection: 0
+            Subtractive Distillation
+            Length Purification
+            <{0.8}>
+            Minimus Distillation II
+        } then {
+            Vector Reflection -Y
+        } else if {
+            $rot
+            Circle's Reflection
+            Subtractive Distillation
+            Length Purification
+            <{0.8}>
+            Minimus Distillation II            
+        } then {
+            Vector Reflection -Y
+        } else if {
+            $rot
+            Arc's Reflection
+            Subtractive Distillation
+            Length Purification
+            <{0.8}>
+            Minimus Distillation II
+        } then {
+            Vector Reflection +Y
+        } else if {
+            $rot
+            Arc's Reflection
+            Numerical Reflection: 2
+            Division Distillation
+            Subtractive Distillation
+            Length Purification
+            <{0.8}>
+            Minimus Distillation II
+        } then {
+            Vector Reflection -X
+        } else if {
+            $rot
+            Circle's Reflection
+            Numerical Reflection: 3
+            Multiplicative Distillation
+            Numerical Reflection: 4
+            Division Distillation
+            Subtractive Distillation
+            Length Purification
+            <{0.8}>
+            Minimus Distillation II
+        } then {
+            Vector Reflection +X
+        }
+
+        Hermes' Gambit
+        
+        if {
+            Gemini Decomposition
+            Numerical Reflection: -1
+            Multiplicative Distillation
+            $prevDir
+            Equality Distillation
+        } then {
+            Bookkeeper's Gambit: v
+            $prevDir
+        }
+        Hermes' Gambit
+        
+    }
+
+    Hermes' Gambit  
+
+
+    
+}
+
+#define End Game (NE dead)
+{
+    <{"Game Over"}>
+    Hermes' Gambit
+}
+
+#define Point Within Grid (NE dead) = vec -> bool
+{
+    Vector Disintegration
+    Bookkeeper's Gambit: v
+    Store($y)
+    Store($x)
+    
+    Dimensions
+    Store($height)
+    Store($width)
+
+    if {
+        $x
+        $width
+        Maximus Distillation II
+        
+        $x
+        Numerical Reflection: 0
+        Minimus Distillation
+        
+        Disjunction Distillation
+    } then {
+        False Reflection
+    } else if {
+        $y
+        $height
+        Maximus Distillation II
+        
+        $y
+        Numerical Reflection: 0
+        Minimus Distillation
+        
+        Disjunction Distillation
+    } then {
+        False Reflection
+    } else {
+        True Reflection
+    }
+
+    Hermes' Gambit
+
+}
+
+
+//move the snake based on direction
+#define Update Snek (NE dead) = vec, List<Vec> -> List<Vec>, vec
+{
+    Store($snek)
+    Store($apple)
+    Store($dir)
+
+    $snek    
+    Gemini Decomposition
+    Numerical Reflection: 0
+    Selection Distillation
+    
+    $dir
+    Additive Distillation
+    Speaker's Distillation
+    Store($snek)
+
+    if {
+        //if got apple
+        $snek
+        Gemini Decomposition
+        Numerical Reflection: 0
+        Selection Distillation
+
+        $apple
+        Equality Distillation
+    } then {
+        Generate Apple Pos
+        Store($apple)
+    } else if {
+        //if snek intersects itself
+        $snek
+        Gemini Decomposition
+        Uniqueness Purification
+        Abacus Purification
+        Jester's Gambit
+        Abacus Purification
+        Inequality Distillation
+        //if snex outside world
+        $snek
+        Numerical Reflection: 0
+        Selection Distillation
+        Hex {
+            Point Within Grid
+        }
+        Hermes' Gambit
+        Negation Purification
+        Disjunction Distillation
+        
+    } then {
+        End Game
+    } else {
+        Gemini Decomposition
+        Abacus Purification
+        Numerical Reflection: -1
+        Additive Distillation
+        Numerical Reflection: 0
+        Jester's Gambit
+        Selection Exaltation
+    }
+    Hermes' Gambit
+    
+
+    $apple
+    
+    
+
+}
+
+#define Dimensions (NE dead) = -> int, int
+{
+    Numerical Reflection: 20
+    Numerical Reflection: 18
+}
+
+#define Generate Apple Pos (NE dead) = -> vec
+{
+    Dimensions
+    Entropy Reflection
+    Multiplicative Distillation
+    Floor Purification
+    
+    Jester's Gambit
+    Entropy Reflection
+    Multiplicative Distillation
+    Floor Purification
+    Jester's Gambit
+    
+    Numerical Reflection: 0
+    
+    Vector Exaltation
+    
+}
+
+
+#define Init Snek (NE dead) = -> List<vec>
+{
+    //default snex
+    Dimensions
+    Numerical Reflection: 2
+    Division Distillation
+    Jester's Gambit
+    Numerical Reflection: 2
+    Division Distillation
+    Jester's Gambit
+    Numerical Reflection: 0
+    Vector Exaltation
+    
+    Gemini Decomposition
+    Vector Reflection -X
+    Additive Distillation
+
+    Numerical Reflection: 2
+    Flock's Gambit
+}
+
+{
+Vacant Reflection
+Huginn's Gambit
+Extern Hex {
+    
+    //first iteration setup
+    if {
+        Gemini Decomposition
+        Identity Reflection
+        Equality Distillation
+    } then {
+        Bookkeeper's Gambit: v
+        Generate Apple Pos
+        Init Snek
+        Vector Reflection +X
+    }
+    Hermes' Gambit
+
+    Store($dir)
+    Store($snek)
+    Store($apple)
+
+
+    $dir
+    Hex {
+        Update Direction
+    }
+    Hermes' Gambit
+    Copy($dir)
+
+    $apple
+    $snek
+    Hex {
+        Update Snek 
+    }
+    Hermes' Gambit
+    Store($apple)
+    Store($snek)
+
+
+    Dimensions
+    $snek
+    $apple
+    Display
+    
+    $apple
+    $snek
+    $dir
+
+    Numerical Reflection: 1
+    Delay Wisp
+    
+}
+<{(0, -60, 0)}>
+Numerical Reflection: 100
+Gemini Decomposition
+Multiplicative Distillation
+Summon Cyclic Wisp
+
+}
+Scribe's Gambit
+
